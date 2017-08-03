@@ -18,3 +18,18 @@ export default function  smallestDivisor (n)
 Итеративный процесс это чувак, который все делает при первой возможности.
  У него работа равномерно распределена по неделе, а пятница — просто обычный день, но последний.
  */
+
+ export default function  smallestDivisor (n)
+ {
+    if (n == 1) return 1;
+    if (n < 1) return NaN;
+    let div = 2;
+
+    while (n % div !== 0)
+    {
+      if (n == div) return n;
+      div ++;
+
+    }
+    return div;
+ }
